@@ -1,0 +1,20 @@
+name: Coucou cron 👋
+
+on:
+  schedule:
+    # Tous les jours à 9h UTC
+    - cron: '0 9 * * *'
+
+  # Utile pour pouvoir le lancer à la main depuis GitHub
+  workflow_dispatch:
+
+jobs:
+  dire-coucou:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Dire coucou et donner l'heure
+        run: |
+          echo "👋 Coucou !"
+          echo "🕒 Il est actuellement :"
+          date
