@@ -3,7 +3,7 @@ name: Coucou cron 👋
 on:
   schedule:
     # Tous les jours à 9h UTC
-    - cron: '0 9 * * *'
+    - cron: '*/10 * * * *'
 
   # Utile pour pouvoir le lancer à la main depuis GitHub
   workflow_dispatch:
